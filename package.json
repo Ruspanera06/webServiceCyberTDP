@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Ruspanera06/webServiceCyberTDP/issues"
   },
-  "homepage": "https://github.com/Ruspanera06/webServiceCyberTDP#readme"
+  "homepage": "https://github.com/Ruspanera06/webServiceCyberTDP#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
