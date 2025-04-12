@@ -63,7 +63,7 @@ Si possono filtrare anche gli attributi cche si vogliono ricevere semplicemente 
 
 Si può anche filtrare per dataclasses cercherà tutti i dati che hanno una le caratteristiche passate dentro la lista
 
-`GET http://localhost:8080/aziende/?DataClasses=email&DataClasses=ip&title=true`
+`GET http://localhost:8080/aziende/?DataClasses=email&DataClasses="IP addresss"&title=true`
 
 ```json
 [
@@ -75,10 +75,10 @@ Si può anche filtrare per dataclasses cercherà tutti i dati che hanno una le c
 
 ## Password Check
 
-`GET http://localhost:8080/check/?password=ciao`
+L'endpoint check permette richiede una pssword e controlla quali password che contengono dei caratteri uguali alla password mandata
+e restituisce gli hash(sha-1) di quelle password e il numero di volte che sono state violate
 
-L'endpoint check permette di controllare se una password è possibilmente stata violata
-restituisce gli hash delle password con il numero di caratteri uguali
+`GET http://localhost:8080/check/?password=ciao`
 
 ```json
 [
@@ -90,6 +90,16 @@ restituisce gli hash delle password con il numero di caratteri uguali
 ]
 ```
 
+Anche quà si possono limitare il numero di dati
+
+`GET http://localhost:8080/check/?password=ciao&limit=2`
+
+```json
+[
+    {"0018A45C4D1DEF81644B54AB7F969B88D65":1},
+    {"00D4F6E8FA6EECAD2A3AA415EEC418D38EC":2},
+]
+```
 # Authors
 
 - [@SimonFox](https://github.com/Simone-Lauro-itis-pr)
