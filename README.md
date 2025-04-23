@@ -79,7 +79,7 @@ Si può anche filtrare per dataclasses cercherà tutti i dati che hanno una le c
 
 ## Password Check
 
-L'endpoint check permette richiede una pssword e controlla quali password che contengono dei caratteri uguali alla password mandata
+L'endpoint check richiede una password e controlla quali password che contengono dei caratteri uguali alla password mandata
 e restituisce gli hash(sha-1) di quelle password e il numero di volte che sono state violate
 
 ### Example
