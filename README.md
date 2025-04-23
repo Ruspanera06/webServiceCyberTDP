@@ -11,9 +11,11 @@ Questa è la documentazione della api
 
 ## Breaches
 
-`GET http://localhost:8080/aziende/`
-
 L'endpoint azienda restituirà tutte le aziende che hanno ricevuto Data breach
+
+### Example
+
+`GET http://localhost:8080/aziende/`
 
 ```json
 [
@@ -50,6 +52,8 @@ Si possono filtrare anche gli attributi cche si vogliono ricevere semplicemente 
 - logopath
 - dataclasses
 
+### Example
+
 `GET http://localhost:8080/aziende/?name=true&title=true&limit=1`
 
 ```json
@@ -78,6 +82,8 @@ Si può anche filtrare per dataclasses cercherà tutti i dati che hanno una le c
 L'endpoint check permette richiede una pssword e controlla quali password che contengono dei caratteri uguali alla password mandata
 e restituisce gli hash(sha-1) di quelle password e il numero di volte che sono state violate
 
+### Example
+
 `GET http://localhost:8080/check/?password=ciao`
 
 ```json
@@ -91,6 +97,8 @@ e restituisce gli hash(sha-1) di quelle password e il numero di volte che sono s
 ```
 
 Anche quà si possono limitare il numero di dati
+
+### Example
 
 `GET http://localhost:8080/check/?password=ciao&limit=2`
 
