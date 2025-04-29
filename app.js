@@ -32,7 +32,7 @@ app.get("/aziende", async (req, res)=>{
     }
     let data = await response.json();
     if(req.query.limit !== undefined){
-        data = data.slice(0, 25);
+        data = data.slice(0, parseInt(req.query.limit))
     }
     let filteredData = [];
     if(req.query.name || req.query.title || req.query.domain || req.query.breachdate || req.query.pwncount ||
